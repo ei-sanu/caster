@@ -27,74 +27,48 @@ const News: React.FC = () => {
     const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
     const [error, setError] = useState<string | null>(null);
 
-    const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
-
-    // Updated categories to match NewsAPI categories
-    const categories: Category[] = [
-        { name: 'General', value: 'general' },
-        // { name: 'Business', value: 'business' },
-        // { name: 'Technology', value: 'technology' },
-        // { name: 'Sports', value: 'sports' },
-        // { name: 'Entertainment', value: 'entertainment' },
-        // { name: 'Health', value: 'health' },
-        // { name: 'Science', value: 'science' }
-    ];
-
     const fetchNews = async (category: string) => {
         try {
             setLoading(true);
             setError(null);
 
+            const THE_NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+
             let response;
 
-            // Special handling for General and Technology categories
             if (category === 'general') {
-                const lastMonth = new Date();
-                lastMonth.setMonth(lastMonth.getMonth() - 1);
-                const fromDate = lastMonth.toISOString().split('T')[0];
-
-                response = await axios.get('https://newsapi.org/v2/everything', {
+                response = await axios.get('https://api.thenewsapi.com/v1/news/all', {
                     params: {
-                        q: 'tesla OR (breaking AND news)',
-                        from: fromDate,
-                        sortBy: 'publishedAt',
+                        api_token: THE_NEWS_API_KEY,
                         language: 'en',
-                        apiKey: NEWS_API_KEY,
-                        pageSize: 30
-                    }
-                });
-            } else if (category === 'technology') {
-                const today = new Date().toISOString().split('T')[0];
-                response = await axios.get('https://newsapi.org/v2/everything', {
-                    params: {
-                        q: 'technology OR tech OR software OR ai OR apple OR google OR microsoft',
-                        from: today,
-                        to: today,
-                        sortBy: 'popularity',
-                        language: 'en',
-                        apiKey: NEWS_API_KEY,
-                        pageSize: 30
+                        limit: 30,
+                        sort: 'published_at'
                     }
                 });
             } else {
-                response = await axios.get('https://newsapi.org/v2/top-headlines', {
+                response = await axios.get('https://api.thenewsapi.com/v1/news/top', {
                     params: {
-                        country: 'in',
-                        category: category,
-                        apiKey: NEWS_API_KEY,
-                        pageSize: 30
+                        api_token: THE_NEWS_API_KEY,
+                        language: 'en',
+                        categories: category,
+                        limit: 30
                     }
                 });
             }
 
             console.log('API Response:', response.data); // Debug log
 
-            if (response.data.status === 'ok' && Array.isArray(response.data.articles)) {
-                const validArticles = response.data.articles.filter((article: NewsArticle) =>
-                    article.title &&
-                    article.description &&
-                    !article.title.includes('[Removed]')
-                );
+            if (response.data && Array.isArray(response.data.data)) {
+                const validArticles = response.data.data.map((article: any) => ({
+                    title: article.title,
+                    description: article.description,
+                    url: article.url,
+                    urlToImage: article.image_url,
+                    publishedAt: article.published_at,
+                    source: {
+                        name: article.source
+                    }
+                }));
 
                 if (validArticles.length === 0) {
                     setError('No articles found for this category');
@@ -140,6 +114,17 @@ const News: React.FC = () => {
             timeStyle: 'short',
         });
     };
+
+    const categories: Category[] = [
+        { name: 'General', value: 'general' },
+        { name: 'Business', value: 'business' },
+        { name: 'Tech', value: 'tech' },
+        { name: 'Sports', value: 'sports' },
+        { name: 'Entertainment', value: 'entertainment' },
+        { name: 'Health', value: 'health' },
+        { name: 'Science', value: 'science' },
+        { name: 'Politics', value: 'politics' }
+    ];
 
     if (news.length === 0 && !loading) {
         return (
