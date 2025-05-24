@@ -41,7 +41,6 @@ const CurrentWeather: React.FC<CurrentWeatherProps> = ({ data }) => {
         <div className="mb-4 transform transition-transform hover:scale-105 animate-float">
           {getWeatherIcon(data.condition)}
         </div>
-
         <div className="text-center">
           <div className="flex items-center justify-center">
             <span className="text-5xl font-bold">{data.temperature}</span>
