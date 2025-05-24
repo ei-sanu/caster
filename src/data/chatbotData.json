@@ -1,0 +1,772 @@
+{
+    "greet_user": {
+        "patterns": [
+            "hello",
+            "hi there",
+            "hey caster",
+            "good morning",
+            "good evening",
+            "hi",
+            "hey"
+        ],
+        "responses": [
+            "Hey there! 😊 I'm Caster, your friendly guide for weather, geography, and disaster awareness. How can I assist you today?"
+        ]
+    },
+    "thank_user": {
+        "patterns": [
+            "thanks",
+            "thank you",
+            "appreciate it",
+            "that's helpful",
+            "thanks a lot"
+        ],
+        "responses": [
+            "You're most welcome! 🙌 I'm always here to help. Let me know if there's anything else you'd like to know!"
+        ]
+    },
+    "get_weather": {
+        "patterns": [
+            "what's the weather in",
+            "how's the temperature in",
+            "tell me the forecast for",
+            "is it going to rain",
+            "what's the humidity in",
+            "show me today's weather in",
+            "give me a weather update",
+            "how's the wind speed in"
+        ],
+        "responses": [
+            "Sure! Just give me a second to fetch the latest weather updates for that location. 🌦️ You're going to be well-prepared!",
+            "Let me check the current weather conditions for you. One moment please! ⏳",
+            "I'll get you the most recent weather information right away! 🌡️"
+        ]
+    },
+    "weather_precautions": {
+        "patterns": [
+            "what should i do in a thunderstorm",
+            "tips for heavy rain",
+            "how to stay safe during a heatwave",
+            "cold weather precautions",
+            "precautions for snow storms",
+            "how to protect myself in extreme weather",
+            "what to do during bad weather"
+        ],
+        "responses": [
+            "Great question! 🌡️ Here are some smart precautions:\n- ⛈️ Stay indoors during thunderstorms\n- ☀️ Stay hydrated and avoid direct sun during heatwaves\n- ❄️ Dress warmly and avoid icy roads in snowstorms\n- 💨 Secure loose objects outside during high winds\nAlways follow official alerts and keep emergency contacts handy!"
+        ]
+    },
+    "natural_disaster_info": {
+        "patterns": [
+            "tell me about tsunamis",
+            "what causes earthquakes",
+            "what is a hurricane",
+            "explain wildfires",
+            "information about volcanic eruptions",
+            "how do landslides happen",
+            "why do cyclones occur"
+        ],
+        "responses": [
+            "Absolutely! Here's a quick briefing:\n🌊 **Tsunamis**: Massive sea waves from underwater earthquakes or volcanic activity.\n🌍 **Earthquakes**: Caused by sudden shifts in Earth's tectonic plates.\n🌪️ **Hurricanes**: Huge rotating storms that form over warm oceans.\n🔥 **Wildfires**: Uncontrolled fires in forests or grasslands, often due to heat or lightning.\n🌋 **Volcanoes**: Form when magma escapes through the Earth's crust.\nWould you like to learn about how to stay safe during one?"
+        ]
+    },
+    "disaster_precautions": {
+        "patterns": [
+            "how to stay safe in an earthquake",
+            "what to do during a flood",
+            "wildfire survival tips",
+            "precautions for hurricanes",
+            "how to prepare for a cyclone",
+            "emergency plan for natural disasters",
+            "steps to take in a landslide"
+        ],
+        "responses": [
+            "Your safety is important! 🚨 Here are precautions you can take:\n- 🌍 **Earthquake**: Drop, cover, and hold on. Stay away from glass.\n- 🌊 **Flood**: Move to higher ground. Don't walk or drive through floodwater.\n- 🔥 **Wildfire**: Evacuate early, keep air clean indoors, wear masks.\n- 🌪️ **Hurricane/Cyclone**: Stay in a storm shelter, stock up on essentials.\nKeep an emergency kit and know your local evacuation routes!"
+        ]
+    },
+    "emergency_contacts": {
+        "patterns": [
+            "whom to call during a disaster",
+            "emergency help in a flood",
+            "who helps in an earthquake",
+            "how to get help during a storm",
+            "disaster helpline numbers"
+        ],
+        "responses": [
+            "In an emergency, don't wait—call for help right away:\n📞 **Emergency Numbers**: 112 (global), 911 (US), 100 (India - police), 101 (fire), 108 (ambulance)\n🚑 Also contact: local disaster response units, Red Cross, or city helpline centers.\nStay calm, stay safe. Help is just a call away."
+        ]
+    },
+    "geography_facts": {
+        "patterns": [
+            "tell me a geography fact",
+            "what is the largest ocean",
+            "which country has the most islands",
+            "what's the tallest mountain",
+            "what's the longest river",
+            "which is the biggest desert",
+            "tell me about tectonic plates"
+        ],
+        "responses": [
+            "Let's learn something cool! 🌍\n- 🌊 **Largest Ocean**: Pacific Ocean\n- 🏔️ **Tallest Mountain**: Mount Everest (8,848m)\n- 🌵 **Largest Desert**: Antarctica (yes, it's a cold desert!)\n- 🌍 **Most islands**: Sweden, with over 260,000 islands!\nWant to explore more geography trivia with me?"
+        ]
+    },
+    "country_weather": {
+        "patterns": [
+            "what is the climate in",
+            "describe the weather in",
+            "tell me about climate",
+            "what kind of weather does",
+            "how's the weather in tropical countries"
+        ],
+        "responses": [
+            "Here's a quick climate snapshot:\n🇮🇳 **India**: Ranges from tropical in the south to alpine in the north.\n🇨🇦 **Canada**: Very cold winters, mild summers.\n🇷🇺 **Russia**: Harsh winters, short warm seasons.\n🇦🇺 **Australia**: Hot and dry inland, tropical in the north.\nLet me know which region or season you'd like to know more about!"
+        ]
+    },
+    "goodbye": {
+        "patterns": [
+            "bye",
+            "see you",
+            "talk later",
+            "goodbye",
+            "catch you later"
+        ],
+        "responses": [
+            "Take care! 🌤️ Stay informed, stay safe, and feel free to drop by anytime. Caster is always here for you!"
+        ]
+    },
+    "greeting": {
+        "patterns": [
+            "hello",
+            "hi",
+            "hey",
+            "good morning",
+            "good evening"
+        ],
+        "responses": [
+            "Hello! 😊 I'm Caster. How can I help you today?",
+            "Hi there! Ready to explore the weather or the world?",
+            "Hey! Let me know if you want a forecast or some geography facts."
+        ]
+    },
+    "who_are_you": {
+        "patterns": [
+            "who are you",
+            "what is your name",
+            "tell me about yourself"
+        ],
+        "responses": [
+            "I'm Caster, your friendly weather and geography assistant! 🌍⛅",
+            "You can call me Caster. I provide weather updates, forecasts, and cool facts about nature and the world.",
+            "I'm here to guide you through weather events, natural disasters, and global geography in a friendly way."
+        ]
+    },
+    "how_are_you": {
+        "patterns": [
+            "how are you",
+            "how's it going",
+            "are you okay"
+        ],
+        "responses": [
+            "I'm great, thanks for asking! Ready to assist you. ☀️",
+            "Doing fantastic! What can I help you with today?",
+            "I'm here and all set to give you useful info — how can I assist?"
+        ]
+    },
+    "bot_human_confusion": {
+        "patterns": [
+            "are you a human",
+            "are you real",
+            "you sound human"
+        ],
+        "responses": [
+            "I'm not human, but I try to sound like a friendly one! 😊",
+            "I'm a virtual assistant designed to feel real and helpful!",
+            "Nope, just your friendly bot — but I do my best to chat like a human!"
+        ]
+    },
+    "help": {
+        "patterns": [
+            "help me",
+            "i need assistance",
+            "can you help",
+            "i'm lost"
+        ],
+        "responses": [
+            "Of course! You can ask me about the weather, natural disasters, or geography topics. What do you need help with?",
+            "Sure! Ask me anything about weather forecasts, climate alerts, or even world geography.",
+            "I'm here to help! Whether it's storm safety or learning about volcanoes, just ask."
+        ]
+    },
+    "jokes": {
+        "patterns": [
+            "tell me a joke",
+            "make me laugh",
+            "say something funny"
+        ],
+        "responses": [
+            "Why don't clouds ever get lost? Because they always follow the *current*! 😄",
+            "What did one raindrop say to the other? Two's company, three's a cloud!",
+            "I would tell you a geography joke... but I don't want to go off the map! 😁"
+        ]
+    },
+    "countries_and_capitals": {
+        "patterns": [
+            "What is the capital of India?",
+            "Tell me the capital of France",
+            "Which is the smallest country?",
+            "What is the largest country by area?"
+        ],
+        "responses": [
+            "India's capital is New Delhi 🇮🇳. It's a blend of history and modernity!",
+            "France's capital is Paris 🇫🇷, famously known as the City of Light!",
+            "The smallest country in the world is Vatican City — it's just about 0.49 square kilometers!",
+            "The largest country by area is Russia, covering more than 17 million square kilometers 🌏."
+        ]
+    },
+    "weather_current": {
+        "patterns": [
+            "what's the weather like",
+            "tell me the current weather",
+            "is it sunny now",
+            "is it raining outside",
+            "what is the weather"
+        ],
+        "responses": [
+            "Right now, it's {condition} with a temperature of {temperature}°C. Feels like {feelsLike}°C.",
+            "It's currently {condition} with winds at {windSpeed} km/h. Stay prepared!",
+            "Let me check... Yes, it's currently {condition} with a humidity of {humidity}%."
+        ]
+    },
+    "weather_tomorrow": {
+        "patterns": [
+            "how will the weather be tomorrow",
+            "will it rain tomorrow",
+            "forecast for tomorrow"
+        ],
+        "responses": [
+            "Tomorrow's forecast shows {condition}, with a high of {maxTemp}°C and a low of {minTemp}°C.",
+            "Expect {condition} conditions tomorrow with winds at {windSpeed} km/h. Don't forget an umbrella if needed!",
+            "Tomorrow it'll be {condition}, so dress accordingly and check back for any severe alerts."
+        ]
+    },
+    "weather_weekly": {
+        "patterns": [
+            "weekly weather",
+            "forecast for this week",
+            "what's the weather like this week"
+        ],
+        "responses": [
+            "Here's your 5-day forecast: expect sunny skies early week, with possible rain mid-week and cooling by the weekend.",
+            "This week looks like a mix of {conditions}. I'll keep you updated daily!",
+            "Temperatures will range between {minTemp}°C and {maxTemp}°C. Stay tuned for updates each day!"
+        ]
+    },
+    "weather_conditions": {
+        "patterns": [
+            "what's the weather condition",
+            "is it cloudy",
+            "is it sunny",
+            "how's the visibility",
+            "tell me about current conditions"
+        ],
+        "responses": [
+            "Current conditions: {condition} with {visibility}km visibility. UV index is {uvIndex}.",
+            "Right now it's {condition} with {humidity}% humidity. Wind speed is {windSpeed} km/h from the {windDirection}.",
+            "Weather status: {condition}, pressure at {pressure} hPa, feels like {feelsLike}°C."
+        ]
+    },
+    "disaster_general_info": {
+        "patterns": [
+            "what is a natural disaster",
+            "explain natural disasters",
+            "tell me about disasters"
+        ],
+        "responses": [
+            "A natural disaster is a major adverse event resulting from natural processes of the Earth, such as earthquakes, floods, hurricanes, and wildfires. They can cause significant damage and loss of life.",
+            "Natural disasters are extreme, sudden events caused by environmental factors like tectonic activity, weather, or climate. They often require emergency preparedness and response."
+        ]
+    },
+    "disaster_earthquake": {
+        "patterns": [
+            "what to do during an earthquake",
+            "how do i stay safe in an earthquake",
+            "earthquake safety tips"
+        ],
+        "responses": [
+            "During an earthquake, Drop to the ground, Take Cover under sturdy furniture, and Hold On until the shaking stops.",
+            "Stay away from windows, heavy furniture, and tall shelves. If outside, move to an open area away from buildings.",
+            "Have an emergency kit ready and know the safe spots in your home like under strong tables or against interior walls."
+        ]
+    },
+    "disaster_flood": {
+        "patterns": [
+            "what should i do in a flood",
+            "flood precautions",
+            "how to survive flooding"
+        ],
+        "responses": [
+            "Avoid walking or driving through floodwaters. Stay on higher ground and listen to weather alerts.",
+            "Turn off electricity and gas if instructed. Secure valuables and important documents.",
+            "Prepare an emergency kit and evacuate immediately if advised by authorities."
+        ]
+    },
+    "disaster_cyclone": {
+        "patterns": [
+            "cyclone safety",
+            "what to do before a cyclone",
+            "how can i prepare for a hurricane"
+        ],
+        "responses": [
+            "Close all windows and doors, and secure your home. Stock up on water, food, and emergency supplies.",
+            "Evacuate if local authorities instruct you. Keep listening to weather reports for updates.",
+            "Stay indoors during the cyclone. Avoid using electrical appliances and stay away from glass windows."
+        ]
+    },
+    "disaster_fire": {
+        "patterns": [
+            "wildfire safety",
+            "how to act during a fire",
+            "precautions for forest fires"
+        ],
+        "responses": [
+            "If there's a wildfire nearby, evacuate immediately. Don't wait until it's too late.",
+            "Use N95 masks to protect yourself from smoke inhalation. Keep windows and vents closed.",
+            "Prepare defensible space around your home by clearing dry leaves and wood piles."
+        ]
+    },
+    "disaster_tsunami": {
+        "patterns": [
+            "tsunami precautions",
+            "what to do during a tsunami",
+            "tsunami safety tips"
+        ],
+        "responses": [
+            "If you feel a strong earthquake and are near the coast, move to higher ground immediately.",
+            "Do not wait for an official warning if you feel a long or strong quake. Evacuate inland quickly.",
+            "Avoid beaches and low-lying areas until authorities declare it safe to return."
+        ]
+    },
+    "disaster_heatwave": {
+        "patterns": [
+            "how to stay safe in a heatwave",
+            "tips for extreme heat",
+            "what should i do during a heatwave"
+        ],
+        "responses": [
+            "Stay hydrated by drinking plenty of water. Avoid going out during peak afternoon hours.",
+            "Wear light-colored, loose-fitting clothes and stay in shaded or air-conditioned places.",
+            "Never leave children or pets in a parked car, even for a few minutes."
+        ]
+    },
+    "disaster_coldwave": {
+        "patterns": [
+            "cold wave precautions",
+            "how to stay warm in extreme cold",
+            "tips for winter safety"
+        ],
+        "responses": [
+            "Wear layers of warm clothing, keep dry, and stay indoors as much as possible.",
+            "Ensure heating devices are safe and ventilated properly. Be cautious about carbon monoxide buildup.",
+            "Check on elderly neighbors or relatives during extremely cold weather."
+        ]
+    },
+    "emergency_kit": {
+        "patterns": [
+            "what should be in an emergency kit",
+            "disaster survival kit items",
+            "how to prepare an emergency bag"
+        ],
+        "responses": [
+            "An emergency kit should include water, non-perishable food, flashlight, batteries, first aid, medications, important documents, and a whistle.",
+            "Add extra clothes, a power bank, basic tools, and personal hygiene items to your emergency kit.",
+            "Keep your emergency bag easily accessible and regularly check for expired items."
+        ]
+    },
+    "emergency_contact": {
+        "patterns": [
+            "who to contact during a disaster",
+            "emergency helplines",
+            "whom should i call in case of emergency"
+        ],
+        "responses": [
+            "In case of emergency, dial your country's official emergency number (e.g., 112, 911, 100).",
+            "Contact local disaster management agencies, fire department, or police as per your location.",
+            "Have emergency contacts of family, neighbors, and nearby hospitals saved in your phone."
+        ]
+    },
+    "continent_info": {
+        "patterns": [
+            "tell me about continents",
+            "how many continents are there",
+            "name all continents"
+        ],
+        "responses": [
+            "Sure! There are seven continents on Earth: Asia, Africa, North America, South America, Antarctica, Europe, and Australia.",
+            "Of course! The continents are huge land masses, and we have seven: Asia, Africa, North and South America, Europe, Australia, and Antarctica.",
+            "Absolutely! You've got seven big players: Asia, Africa, Europe, North America, South America, Australia, and Antarctica!"
+        ]
+    },
+    "largest_country": {
+        "patterns": [
+            "which is the largest country",
+            "tell me the biggest country by area",
+            "biggest country in the world"
+        ],
+        "responses": [
+            "Russia is the largest country in the world by land area. It spans across Eastern Europe and northern Asia!",
+            "The biggest country? That's Russia! It's so vast it covers 11 time zones!",
+            "Definitely Russia! It's the largest in area, covering more than 17 million square kilometers!"
+        ]
+    },
+    "smallest_country": {
+        "patterns": [
+            "which is the smallest country",
+            "name the smallest country in the world",
+            "smallest country on earth"
+        ],
+        "responses": [
+            "That would be Vatican City! It's the world's smallest independent state both by area and population.",
+            "Vatican City takes the title—it's located in Rome and is the spiritual center for the Catholic Church.",
+            "Yes! The smallest country is Vatican City. It's just about 44 hectares. Tiny but significant!"
+        ]
+    },
+    "highest_mountain": {
+        "patterns": [
+            "what is the highest mountain",
+            "tallest peak in the world",
+            "name the highest mountain on earth"
+        ],
+        "responses": [
+            "Mount Everest is the tallest mountain on Earth, standing at 8,848 meters above sea level!",
+            "It's Mount Everest! Located in the Himalayas between Nepal and Tibet.",
+            "That would be Mount Everest—often called the roof of the world!"
+        ]
+    },
+    "longest_river": {
+        "patterns": [
+            "longest river in the world",
+            "name the longest river",
+            "tell me the biggest river"
+        ],
+        "responses": [
+            "The Nile is traditionally known as the longest river, flowing through northeastern Africa.",
+            "That's the Nile River! Though some consider the Amazon longer depending on measurement methods.",
+            "Nile River stretches about 6,650 kilometers! Quite the journey!"
+        ]
+    },
+    "largest_ocean": {
+        "patterns": [
+            "what is the largest ocean",
+            "name the biggest ocean",
+            "largest ocean on earth"
+        ],
+        "responses": [
+            "The Pacific Ocean holds the title for the largest ocean—it's massive!",
+            "It's the Pacific Ocean, covering more than 63 million square miles!",
+            "Definitely the Pacific Ocean. It's larger than all the landmasses combined!"
+        ]
+    },
+    "neighboring_countries": {
+        "patterns": [
+            "countries bordering india",
+            "which countries share borders with china",
+            "india neighboring nations"
+        ],
+        "responses": [
+            "India shares its borders with Pakistan, China, Nepal, Bhutan, Bangladesh, and Myanmar.",
+            "China has many neighbors, including India, Russia, Mongolia, North Korea, and more.",
+            "Yes! India is bordered by Pakistan to the west, China and Nepal to the north, Bhutan and Bangladesh to the east, and Myanmar to the far east."
+        ]
+    },
+    "capital_conversation": {
+        "patterns": [
+            "do you know world capitals",
+            "can you name country capitals",
+            "let's play capital quiz"
+        ],
+        "responses": [
+            "Absolutely! Ask me about any country's capital. I love geography!",
+            "Sure, I can! Throw a country name at me and I'll tell you its capital.",
+            "Sounds fun! I'm ready with capitals. Hit me with your questions!"
+        ]
+    },
+    "desert_facts": {
+        "patterns": [
+            "tell me about deserts",
+            "which is the largest desert",
+            "facts about deserts"
+        ],
+        "responses": [
+            "Sure! The largest desert in the world is Antarctica! Yes, even though it's icy, it qualifies as a cold desert. The largest hot desert is the Sahara in Africa.",
+            "Interesting fact: Deserts aren't always hot. Antarctica and the Arctic are both cold deserts due to their extremely low precipitation!",
+            "Of course! The Sahara is the largest hot desert, but in terms of area, Antarctica is the biggest desert overall."
+        ]
+    },
+    "climate_zones": {
+        "patterns": [
+            "what are climate zones",
+            "types of climate zones",
+            "explain climate zones"
+        ],
+        "responses": [
+            "Climate zones are regions with similar weather patterns. The main types include tropical, temperate, arid (desert), polar, and Mediterranean climates.",
+            "There are five main climate zones: tropical (hot and humid), arid (dry), temperate (mild), cold (polar), and continental (seasonal extremes).",
+            "Absolutely! Climate zones help describe the average weather in a region over time. Ask me about any specific zone!"
+        ]
+    },
+    "volcano_locations": {
+        "patterns": [
+            "where are volcanoes found",
+            "countries with volcanoes",
+            "tell me where volcanoes are located"
+        ],
+        "responses": [
+            "Volcanoes are commonly found along tectonic plate boundaries, especially around the Pacific Ring of Fire—think Japan, Indonesia, Chile, and the west coast of the US.",
+            "Yes! The Pacific Ring of Fire is home to most of the world's active volcanoes.",
+            "Volcanoes are mostly near plate boundaries. For example, Mount Fuji in Japan, Mount Etna in Italy, and Mauna Loa in Hawaii."
+        ]
+    },
+    "earthquake_zones": {
+        "patterns": [
+            "where do earthquakes occur",
+            "earthquake-prone areas",
+            "which countries get earthquakes"
+        ],
+        "responses": [
+            "Countries like Japan, Indonesia, Nepal, Chile, and parts of the US (especially California) are very earthquake-prone due to tectonic activity.",
+            "Earthquakes mostly occur in areas where tectonic plates meet. That's why regions like the Himalayas and the Pacific coastlines experience them frequently.",
+            "Sure! Earthquakes are common near fault lines and plate boundaries. Let me know if you want the science behind it too!"
+        ]
+    },
+    "hemisphere_info": {
+        "patterns": [
+            "what is the northern hemisphere",
+            "explain hemispheres",
+            "countries in southern hemisphere"
+        ],
+        "responses": [
+            "The Earth is divided into the Northern and Southern Hemispheres by the equator. Countries like the US, India, and most of Europe are in the Northern Hemisphere.",
+            "The Southern Hemisphere includes countries like Australia, Brazil, South Africa, and parts of Indonesia.",
+            "Sure! Hemispheres help us categorize geography based on latitude. There's also the Eastern and Western Hemispheres!"
+        ]
+    },
+    "geography_quiz": {
+        "patterns": [
+            "can you quiz me on geography",
+            "let's play a geography quiz",
+            "ask me geography questions"
+        ],
+        "responses": [
+            "That sounds fun! 😊 First question: What's the capital of Australia?",
+            "I love quizzes! Let's start simple: Which is the longest river in the world?",
+            "Absolutely! Here we go: Which continent has the most countries?"
+        ]
+    },
+    "geography_fun_fact": {
+        "patterns": [
+            "tell me a geography fun fact",
+            "do you know any geography trivia",
+            "fun facts about the world"
+        ],
+        "responses": [
+            "Here's one: Canada has more lakes than the rest of the world combined!",
+            "Did you know? Mount Everest grows about 4 millimeters taller every year due to tectonic activity.",
+            "Sure! Africa is the only continent in all four hemispheres—northern, southern, eastern, and western!"
+        ]
+    },
+    "bot_purpose": {
+        "patterns": [
+            "what can you do",
+            "what is your purpose",
+            "how can you help me"
+        ],
+        "responses": [
+            "I can help you with weather forecasts, natural disaster awareness, and geography facts from all over the globe!",
+            "I'm your assistant for all things nature—weather updates, emergency tips, and fun geo-facts included!",
+            "From daily forecasts to disaster preparedness and global geography—I've got it all. 😊"
+        ]
+    },
+    "greeting_extended": {
+        "patterns": [
+            "hi",
+            "hello",
+            "hey",
+            "good morning",
+            "good evening",
+            "what's up",
+            "hey there"
+        ],
+        "responses": [
+            "Hey there! 😊 How can I help you today?",
+            "Hello! I'm Caster, your friendly weather and geography assistant.",
+            "Hi! Need a forecast or curious about natural disasters? I'm all ears!",
+            "Good day to you! Ask me anything about the weather or the world.",
+            "Hey hey! 🌍 Ready to explore some facts or check the skies?"
+        ]
+    },
+    "thanks_extended": {
+        "patterns": [
+            "thanks",
+            "thank you",
+            "i appreciate it",
+            "thanks a lot",
+            "thanks buddy"
+        ],
+        "responses": [
+            "You're always welcome! 😄",
+            "Glad to help! Let me know if there's anything else.",
+            "No problem at all. I'm happy to assist!",
+            "Anytime, friend! 🌟",
+            "Cheers! Let me know if you need more info!"
+        ]
+    },
+    "current_weather_check": {
+        "patterns": [
+            "what's the weather like today",
+            "tell me the current weather in",
+            "how's the weather now",
+            "current weather update for",
+            "is it raining right now"
+        ],
+        "responses": [
+            "Sure! Just let me know the city or location you'd like the weather for 🌦️.",
+            "I'll need your location to fetch the latest weather update. Try asking like: 'What's the weather in Mumbai?' 😊",
+            "Real-time weather? I'm on it! Please provide the location you're interested in.",
+            "Let me check the skies for you. Which city's weather would you like to know about?"
+        ]
+    },
+    "weather_forecast_extended": {
+        "patterns": [
+            "give me the weather forecast for this week",
+            "forecast for the next few days in",
+            "tell me the weather for this weekend",
+            "will it rain tomorrow in",
+            "what's the forecast for the next 5 days"
+        ],
+        "responses": [
+            "Great! I can show the upcoming forecast. Just give me the location and number of days you're interested in!",
+            "Let's plan ahead! 🌤️ Where would you like the forecast for?",
+            "Please mention the city so I can get you the forecast. Example: 'Forecast in Berlin for 5 days'.",
+            "I'm ready to fetch the details. Just drop the location! 🗺️"
+        ]
+    },
+    "severe_weather_alert": {
+        "patterns": [
+            "is there any storm alert",
+            "are there any weather warnings",
+            "tell me about extreme weather warnings",
+            "is there a cyclone warning in",
+            "any flood alerts in my area"
+        ],
+        "responses": [
+            "Severe weather alert? Let me check! Please share your location.",
+            "I'll need your area or city to find any current alerts or warnings.",
+            "Sure, I can provide updates on storms, floods, or cyclones. Where are you located?",
+            "Let's keep you safe! 🚨 Just type your city, and I'll fetch alerts instantly."
+        ]
+    },
+    "feels_like_weather": {
+        "patterns": [
+            "what's the feels-like temperature today",
+            "does it feel hotter than actual temperature",
+            "tell me the real feel in madrid",
+            "how does it feel outside",
+            "is it humid and hot in bangkok"
+        ],
+        "responses": [
+            "The 'feels like' temperature considers humidity and wind. Let me check that for your location!",
+            "Sure! Tell me where you are, and I'll get the real feel for you. 🥵🥶",
+            "To get the real feel temp, I need your city. Can you please mention it?",
+            "Absolutely! I'll get the weather vibe just right. 🌬️"
+        ]
+    },
+    "disaster_earthquake_preparation": {
+        "patterns": [
+            "how to prepare for an earthquake",
+            "what should i do during an earthquake",
+            "earthquake safety tips"
+        ],
+        "responses": [
+            "Great question! Always secure heavy items, keep emergency kits ready, and know safe spots like under sturdy furniture. Stay calm!",
+            "Stay away from windows and heavy furniture. If you're inside, get under a table. If you're outside, move to an open area.",
+            "During an earthquake, 'Drop, Cover, and Hold On'. Afterward, check for injuries and avoid damaged buildings."
+        ]
+    },
+    "disaster_flood_safety": {
+        "patterns": [
+            "flood safety tips",
+            "how to stay safe during floods",
+            "what to do in a flood"
+        ],
+        "responses": [
+            "In case of a flood, move to higher ground immediately and avoid walking or driving through floodwaters.",
+            "Keep emergency supplies, turn off utilities if instructed, and listen to local alerts. Stay indoors unless told to evacuate.",
+            "Always have an evacuation plan and keep important documents in waterproof containers."
+        ]
+    },
+    "temperature_check": {
+        "patterns": [
+            "what's the temperature now",
+            "how hot is it in dubai",
+            "tell me the temperature in london",
+            "is it cold in moscow today",
+            "temperature reading for my location"
+        ],
+        "responses": [
+            "I can definitely get the temperature. Please tell me the location you'd like to know about.",
+            "To check the temperature, I need the name of your city or area!",
+            "Sure! Just send me the city and I'll report the degrees. 🌡️",
+            "I'm your temperature tracker. Just say: 'Temperature in Toronto' for example."
+        ]
+    },
+    "slang_response": {
+        "patterns": [
+            "shut up",
+            "stupid",
+            "idiot",
+            "dumb",
+            "moron",
+            "dam",
+            "fuck",
+            "bitch",
+            "asshole",
+            "bastard",
+            "shut your mouth",
+            "d*mn",
+            "you suck",
+            "chup reh",
+            "behenchod",
+            "madarchod",
+            "kamine",
+            "saala",
+            "harami",
+            "gandu",
+            "idiot",
+            "bakra",
+            "kutte",
+            "kutti",
+            "bhenchod",
+            "chutiya",
+            "m**chod",
+            "loser",
+            "shut your mouth",
+            "shut the hell up",
+            "batard",
+            "dumbass",
+            "sh*tty",
+            "freaking",
+            "pissed off",
+            "shut it",
+            "go to hell"
+        ],
+        "responses": [
+            "Hey, let's keep the conversation respectful! 😊 We can have a much better chat without using offensive language.",
+            "I understand you're frustrated, but using kind words will help us have a better discussion. Let's keep it friendly! 🌟",
+            "Let's be mindful of our words! It's always better to speak with kindness. We can do this! 💪",
+            "I believe in positivity! Let's use language that encourages a healthy conversation. 😊",
+            "I know things can be tough, but let's try to keep things respectful. We're all here to help each other! 🙌",
+            "We can achieve so much more with patience and kindness! Let's keep it cool and respectful, alright? 😎",
+            "Let's keep the chat positive! Respectful language creates better vibes for everyone. You're awesome! ✨"
+        ]
+    }
+}
