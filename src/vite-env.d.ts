@@ -1,2 +1,2 @@
 /// <reference types="vite/client" />
-///abac
+///ab
