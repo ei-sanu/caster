@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { ForecastData, LocationSuggestion, WeatherData } from '../types/weather';
 
-const API_KEY = '33fa01f872bb09efc81a0edf69305e40';
+const API_KEY = import.meta.env.VITE_APP_WEATHER_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 export const fetchWeatherData = async (location: string): Promise<WeatherData> => {

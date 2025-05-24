@@ -27,7 +27,7 @@ const News: React.FC = () => {
     const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
     const [error, setError] = useState<string | null>(null);
 
-    const NEWS_API_KEY = '067a6e3464354022b23783b9afff4c9b';
+    const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
     // Updated categories to match NewsAPI categories
     const categories: Category[] = [
