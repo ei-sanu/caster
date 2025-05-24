@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ForecastData, LocationSuggestion, WeatherData } from '../types/weather';
+import { ForecastData, WeatherData } from '../types/weather';
 
 const API_KEY = import.meta.env.VITE_APP_WEATHER_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
@@ -77,45 +77,5 @@ export const fetchForecast = async (location: string): Promise<ForecastData[]> =
   } catch (error) {
     console.error('Error fetching forecast data:', error);
     throw error;
-  }
-};
-
-export const fetchLocationSuggestions = async (query: string): Promise<LocationSuggestion[]> => {
-  if (query.length < 2) return [];
-
-  try {
-    // Check if input is a postal/PIN code (numeric and 4-6 digits)
-    if (/^\d{4,6}$/.test(query)) {
-      const response = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/zip?zip=${query}&appid=${API_KEY}`
-      );
-
-      if (response.data) {
-        return [{
-          name: response.data.name,
-          country: response.data.country,
-          lat: response.data.lat,
-          lon: response.data.lon,
-          isPostalCode: true,
-          postalCode: query
-        }];
-      }
-    }
-
-    // Regular city search
-    const response = await axios.get(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`
-    );
-
-    return response.data.map((location: any) => ({
-      name: location.name,
-      country: location.country,
-      state: location.state,
-      lat: location.lat,
-      lon: location.lon
-    }));
-  } catch (error) {
-    console.error('Error fetching location suggestions:', error);
-    return [];
   }
 };

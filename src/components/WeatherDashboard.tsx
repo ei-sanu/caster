@@ -1,9 +1,8 @@
-import { AlertTriangle, MapPin, Search as SearchIcon } from 'lucide-react';
-import React, { useEffect, useRef, useState } from 'react';
+import { AlertTriangle, Search as SearchIcon } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import useDebounce from '../hooks/useDebounce';
-import { fetchForecast, fetchLocationSuggestions, fetchWeatherData } from '../services/weatherService';
-import { ForecastData, LocationSuggestion, WeatherData } from '../types/weather';
+import { fetchForecast, fetchWeatherData } from '../services/weatherService';
+import { ForecastData, WeatherData } from '../types/weather';
 import CurrentWeather from './CurrentWeather';
 import ForecastPanel from './ForecastPanel';
 import WeatherDetails from './WeatherDetails';
@@ -17,11 +16,6 @@ const WeatherDashboard: React.FC = () => {
   const [forecastData, setForecastData] = useState<ForecastData[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [suggestions, setSuggestions] = useState<LocationSuggestion[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
-  const debouncedSearch = useDebounce(searchInput, 300);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,85 +44,12 @@ const WeatherDashboard: React.FC = () => {
     fetchData();
   }, [location]);
 
-  useEffect(() => {
-    const fetchSuggestions = async () => {
-      if (debouncedSearch.length >= 2) {
-        setIsLoading(true);
-        const results = await fetchLocationSuggestions(debouncedSearch);
-        setSuggestions(results);
-        setIsLoading(false);
-        setShowSuggestions(true);
-      } else {
-        setSuggestions([]);
-        setShowSuggestions(false);
-      }
-    };
-
-    fetchSuggestions();
-  }, [debouncedSearch]);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setShowSuggestions(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchInput.trim()) {
-      // Check if the input contains coordinates
-      if (searchInput.includes(',')) {
-        setLocation(searchInput);
-      } else {
-        // For city searches, use the city name directly
-        setLocation(searchInput.split(',')[0]); // Take just the city name
-      }
+      setLocation(searchInput.trim());
       setSearchInput('');
-      setShowSuggestions(false);
     }
-  };
-
-  const handleSuggestionClick = (suggestion: LocationSuggestion) => {
-    setSearchInput(`${suggestion.name}, ${suggestion.country}`);
-    setShowSuggestions(false);
-    setLocation(`${suggestion.lat},${suggestion.lon}`);
-  };
-
-  const renderSuggestionContent = (suggestion: LocationSuggestion) => {
-    if (suggestion.isPostalCode) {
-      return (
-        <>
-          <MapPin className="h-4 w-4 text-gray-400" />
-          <div>
-            <span className="text-gray-900 dark:text-white">
-              {suggestion.name} ({suggestion.postalCode})
-            </span>
-            <span className="text-gray-500 dark:text-gray-400 ml-1">
-              {suggestion.country}
-            </span>
-          </div>
-        </>
-      );
-    }
-
-    return (
-      <>
-        <MapPin className="h-4 w-4 text-gray-400" />
-        <div>
-          <span className="text-gray-900 dark:text-white">
-            {suggestion.name}
-          </span>
-          <span className="text-gray-500 dark:text-gray-400 ml-1">
-            {suggestion.state && `${suggestion.state},`} {suggestion.country}
-          </span>
-        </div>
-      </>
-    );
   };
 
   if (loading) {
@@ -166,13 +87,13 @@ const WeatherDashboard: React.FC = () => {
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
           Weather Dashboard
         </h1>
-        <div ref={searchRef} className="relative max-w-xs w-full">
+        <div className="relative max-w-xs w-full">
           <form onSubmit={handleSearch} className="relative">
             <input
               type="text"
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
-              placeholder="Search by city or PIN code..."
+              placeholder="Enter city name..."
               className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-700 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             />
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -180,33 +101,6 @@ const WeatherDashboard: React.FC = () => {
             </div>
             <button type="submit" className="hidden">Search</button>
           </form>
-
-          {/* Suggestions dropdown */}
-          {showSuggestions && (searchInput.length >= 2) && (
-            <div className="absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700">
-              {isLoading ? (
-                <div className="px-4 py-3 text-sm text-gray-700 dark:text-gray-300">
-                  Loading...
-                </div>
-              ) : suggestions.length > 0 ? (
-                <ul className="max-h-60 overflow-auto">
-                  {suggestions.map((suggestion, index) => (
-                    <li
-                      key={`${suggestion.name}-${index}`}
-                      onClick={() => handleSuggestionClick(suggestion)}
-                      className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2 text-sm"
-                    >
-                      {renderSuggestionContent(suggestion)}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <div className="px-4 py-3 text-sm text-gray-700 dark:text-gray-300">
-                  No locations found
-                </div>
-              )}
-            </div>
-          )}
         </div>
       </div>
 
